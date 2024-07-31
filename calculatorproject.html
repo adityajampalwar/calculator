@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title> calculator</title>
+        <meta charset="tuf-8">
+        <meta name="desciption" cantain="calculator">
+        <meta name="project" contain="calculator project">
+        <meta name="viewport" contain="width=device-width,initial-scale-1">
+    </head>
+    <style>
+        body{
+            background-color: rgb(157, 212, 157);
+            height:100%;
+            margin-left: 60px;
+            margin-top: 3%;
+            position: sticky;
+            top:20px;
+            position: fixed;
+            
+        }
+       
+        input[type=button]{
+            width:60px;
+            height:60px;
+        }
+        h1{
+            margin-left: 60px;
+            position: relative;
+            left:35%;
+        }
+        body table{
+            background-color: rgba(255,255,255,0.2);
+            height: 400px;;
+            width: 400px;
+            box-shadow: 2px 2px 3px black;
+            position: relative;
+            left:35%;
+          
+
+        }
+        #a{
+            box-shadow: 2px 2px 3px black;
+        }
+        #mm{
+            box-shadow: 2px 2px 3px black;
+
+        }
+
+       
+        </style>
+    <body>
+        <script>
+            function pick(val){
+                document.getElementById("a").value +=val;
+            }
+            function clr(){
+                document.getElementById("a").value =" ";
+            }
+            function solve(){
+                var x=document.getElementById("a").value;
+                var y=eval(x);
+                document.getElementById("a").value=y;
+            }
+        </script>
+         <h1>CALCULATOR</h1>
+        <table>
+           
+            <tr >
+                <th colspan="3"><input typr="text" id="a"><th>
+                <th><input type="button" value="c" id="mm" onclick="clr()" >
+            </tr>
+            <tr >
+               <th><input type="button" value="1" onclick="pick(1)" id="mm" ><th>
+               <th><input type="button" value="2" onclick="pick(2)" id="mm" ><th>
+                <th><input type="button" value="3"onclick="pick(3)" id="mm"><th> 
+                 <th><input type="button" value="/" onclick="pick('/')" id="mm"><th>
+                
+            </tr>
+            <tr>
+                <th><input type="button" value="4"onclick="pick(4)" id="mm"><th>
+                 <th><input type="button" value="5" onclick="pick(5)" id="mm"><th> 
+                 <th><input type="button" value="6"onclick="pick(6)" id="mm"><th>
+                 <th><input type="button" value="*" onclick="pick('*')" id="mm"></th>
+
+             </tr>
+             <tr>
+                <th><input type="button" value="7"onclick="pick(7)" id="mm"><th>
+                 <th><input type="button" value="8"onclick="pick(8)" id="mm" ><th> 
+                 <th><input type="button" value="9"onclick="pick(9)"id="mm"  ><th>
+                 <th><input type="button" value="-"onclick="pick('-')" id="mm" ></th>
+             </tr>
+             <tr>
+                <th><input type="button" value="." onclick="pick('.')"id="mm" ><th>
+                 <th><input type="button" value="0" onclick="pick(0)" id="mm"><th> 
+                 <th><input type="button" value="=" onclick="solve()" id="mm"><th>
+                 <th><input type="button" value="+" onclick="pick('+')" id="mm"></th>
+             </tr>
+        </table>
+    </body>
+    </html>
